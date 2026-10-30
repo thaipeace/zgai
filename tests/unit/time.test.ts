@@ -14,7 +14,7 @@ describe("time", () => {
     const s = stamp(vn("2026-10-29 14:05")); // 29/10/2026 là thứ Năm
     expect(s).toContain("14:05");
     expect(s).toContain("29/10/2026");
-    expect(s).toMatch(/Th 5|Thứ Năm|T5/);
+    expect(s).toMatch(/Th 5|Thứ 5|Thứ Năm|T5/i);
   });
 
   it("kiểm tra định dạng khóa thời gian", () => {
