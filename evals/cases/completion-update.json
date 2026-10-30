@@ -1,0 +1,16 @@
+{
+  "id": "completion-update",
+  "description": "Việc được giao buổi sáng và báo xong buổi trưa: trạng thái phải là done, người phụ trách đúng",
+  "group": "Hành chính",
+  "now": "2026-10-29 18:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-29 08:30", "from": "Lan", "text": "Chị Hoa ơi gửi giúp em hợp đồng bản scan cho bên đối tác Phú Thái nhé" },
+    { "at": "2026-10-29 08:31", "from": "Hoa", "text": "Ok em" },
+    { "at": "2026-10-29 10:15", "from": "Hoa", "text": "Chị gửi hợp đồng cho bên Phú Thái rồi nhé" },
+    { "at": "2026-10-29 10:16", "from": "Lan", "text": "Dạ em cảm ơn chị" }
+  ],
+  "expected": [{ "keywords": ["hop dong"], "assignee": "Hoa", "status": "done" }],
+  "forbidden": []
+}
+

@@ -1,0 +1,14 @@
+{
+  "id": "after-midnight",
+  "description": "Tin gửi lúc 00:15 nói 'sáng nay 9h' => hạn là ngày 30/10, không phải 29/10",
+  "group": "Phòng Kinh doanh",
+  "now": "2026-10-30 08:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-30 00:15", "from": "Minh", "text": "@Lan sáng nay 9h họp với khách ở văn phòng, em chuẩn bị hồ sơ năng lực công ty nhé" },
+    { "at": "2026-10-30 06:40", "from": "Lan", "text": "Dạ em biết rồi ạ" }
+  ],
+  "expected": [{ "keywords": ["ho so"], "assignee": "Lan", "status": "open", "deadline": "30/10/2026" }],
+  "forbidden": []
+}
+

@@ -1,0 +1,20 @@
+{
+  "id": "unfinished-only",
+  "description": "Mẫu 'Việc tồn đọng': bỏ việc đã xong, giữ việc chưa ai phản hồi và việc đang làm dở",
+  "group": "Tổ chức hội thảo",
+  "now": "2026-10-29 18:00",
+  "template": "unfinished",
+  "messages": [
+    { "at": "2026-10-29 08:00", "from": "Minh", "text": "@Lan in 50 bộ tài liệu cho hội thảo" },
+    { "at": "2026-10-29 08:05", "from": "Minh", "text": "@Hùng đặt phòng họp tầng 3 cho chiều thứ 6" },
+    { "at": "2026-10-29 08:10", "from": "Minh", "text": "@Tuấn chuẩn bị slide giới thiệu sản phẩm" },
+    { "at": "2026-10-29 09:00", "from": "Lan", "text": "Em in xong 50 bộ tài liệu rồi ạ" },
+    { "at": "2026-10-29 11:00", "from": "Tuấn", "text": "Slide em đang làm, được khoảng 70% rồi anh" }
+  ],
+  "expected": [
+    { "keywords": ["phong hop"], "assignee": "Hùng", "status": "open" },
+    { "keywords": ["slide"], "assignee": "Tuấn", "status": "open" }
+  ],
+  "forbidden": [["tai lieu"]]
+}
+

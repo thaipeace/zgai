@@ -1,0 +1,16 @@
+{
+  "id": "reassignment",
+  "description": "Việc chuyển từ Hùng sang Tuấn: chỉ một đầu việc, người phụ trách cuối cùng là Tuấn, hạn 'chiều thứ 6' = 30/10",
+  "group": "Phòng Kinh doanh",
+  "now": "2026-10-29 18:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-29 09:00", "from": "Minh", "text": "@Hùng làm báo giá cho khách Phú Thái nhé" },
+    { "at": "2026-10-29 09:20", "from": "Hùng", "text": "Anh ơi em đang kẹt deploy, nhờ Tuấn được không ạ" },
+    { "at": "2026-10-29 09:25", "from": "Minh", "text": "Ok vậy @Tuấn làm báo giá Phú Thái giúp anh, chiều thứ 6 gửi khách" },
+    { "at": "2026-10-29 09:26", "from": "Tuấn", "text": "Dạ em nhận" }
+  ],
+  "expected": [{ "keywords": ["bao gia"], "assignee": "Tuấn", "status": "open", "deadline": "30/10/2026" }],
+  "forbidden": []
+}
+

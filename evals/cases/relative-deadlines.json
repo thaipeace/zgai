@@ -1,0 +1,18 @@
+{
+  "id": "relative-deadlines",
+  "description": "Giao việc với hạn tương đối: 'chiều nay', 'mai' phải quy đổi theo thời điểm gửi tin",
+  "group": "Dự án Website ABC",
+  "now": "2026-10-29 20:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-29 14:10", "from": "Minh", "text": "@Hùng kiểm tra lại lỗi thanh toán VNPay trên bản staging trước 5h chiều nay nhé" },
+    { "at": "2026-10-29 14:12", "from": "Hùng", "text": "Ok anh", "reply": { "from": "Minh", "text": "@Hùng kiểm tra lại lỗi thanh toán VNPay..." } },
+    { "at": "2026-10-29 17:05", "from": "Minh", "text": "@Tuấn mai trước 10h sáng gửi báo cáo tiến độ tuần cho khách hàng nhé" }
+  ],
+  "expected": [
+    { "keywords": ["vnpay"], "assignee": "Hùng", "status": "open", "deadline": "29/10/2026" },
+    { "keywords": ["bao cao"], "assignee": "Tuấn", "status": "open", "deadline": "30/10/2026" }
+  ],
+  "forbidden": []
+}
+

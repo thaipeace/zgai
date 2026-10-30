@@ -1,0 +1,15 @@
+{
+  "id": "vague-acceptance",
+  "description": "'Để em xem' vẫn là nhận việc; thông báo nghỉ phép không phải đầu việc",
+  "group": "Kỹ thuật",
+  "now": "2026-10-29 18:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-29 10:00", "from": "Minh", "text": "Server bị chậm quá, ai check giúp với" },
+    { "at": "2026-10-29 10:02", "from": "Hùng", "text": "Để em xem" },
+    { "at": "2026-10-29 10:30", "from": "Lan", "text": "Em xin nghỉ phép chiều nay nhé mọi người" }
+  ],
+  "expected": [{ "keywords": ["server"], "assignee": "Hùng", "status": "open" }],
+  "forbidden": [["nghi phep"]]
+}
+

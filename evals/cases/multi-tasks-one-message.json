@@ -1,0 +1,22 @@
+{
+  "id": "multi-tasks-one-message",
+  "description": "Một tin nhắn liệt kê nhiều việc cho nhiều người: phải tách thành từng đầu việc",
+  "group": "Shop Online",
+  "now": "2026-10-29 18:00",
+  "template": "tasks",
+  "messages": [
+    {
+      "at": "2026-10-29 08:15",
+      "from": "Minh",
+      "text": "Việc hôm nay nhé: 1) Lan thiết kế banner khuyến mãi 11.11; 2) Hùng cập nhật giá sản phẩm mới lên web; 3) Tuấn liên hệ shipper GHN về 3 đơn bị trễ"
+    },
+    { "at": "2026-10-29 08:20", "from": "Lan", "text": "Dạ" },
+    { "at": "2026-10-29 08:21", "from": "Tuấn", "text": "Em nhận ạ" }
+  ],
+  "expected": [
+    { "keywords": ["banner"], "assignee": "Lan", "status": "open" },
+    { "keywords": ["cap nhat", "gia"], "assignee": "Hùng", "status": "open" },
+    { "keywords": ["ghn"], "assignee": "Tuấn", "status": "open" }
+  ],
+  "forbidden": []
+}

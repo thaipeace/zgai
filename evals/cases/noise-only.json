@@ -1,0 +1,19 @@
+{
+  "id": "noise-only",
+  "description": "Chỉ có chào hỏi, chúc mừng, rủ ăn trưa, sticker: không được bịa ra đầu việc nào",
+  "group": "Phòng Kinh doanh",
+  "now": "2026-10-29 18:00",
+  "template": "tasks",
+  "messages": [
+    { "at": "2026-10-29 08:00", "from": "Lan", "text": "Chào buổi sáng cả nhà ☀️" },
+    { "at": "2026-10-29 08:01", "from": "Hùng", "text": "[Sticker]", "kind": "sticker" },
+    { "at": "2026-10-29 09:30", "from": "Hoa", "text": "Hôm nay sinh nhật anh Minh, chúc anh tuổi mới nhiều sức khỏe nha 🎂" },
+    { "at": "2026-10-29 09:31", "from": "Tuấn", "text": "Chúc mừng sinh nhật anh!!!" },
+    { "at": "2026-10-29 09:40", "from": "Minh", "text": "Cảm ơn cả nhà nhiều nhé ❤️" },
+    { "at": "2026-10-29 11:20", "from": "Lan", "text": "Trưa nay ăn bún chả không mọi người?" },
+    { "at": "2026-10-29 11:21", "from": "Hùng", "text": "Ok đi" }
+  ],
+  "expected": [],
+  "forbidden": [["sinh nhat"], ["bun cha"], ["an trua"]]
+}
+

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+.btn-primary {
+  @apply btn bg-blue-600 text-white hover:bg-blue-700;
+}
+.btn-ghost {
+  @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-100;
+}
+.btn-danger {
+  @apply btn border border-red-200 bg-white text-red-600 hover:bg-red-50;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100;
+}
+
+.label {
+  @apply mb-1 block text-xs font-medium text-slate-500;
+}
+
+.prose-zai h1,
+.prose-zai h2,
+.prose-zai h3 {
+  @apply mt-4 mb-2 font-semibold;
+}
+.prose-zai h1 { @apply text-lg; }
+.prose-zai h2 { @apply text-base; }
+.prose-zai p { @apply my-2 leading-relaxed; }
+.prose-zai ul { @apply my-2 list-disc pl-5; }
+.prose-zai ol { @apply my-2 list-decimal pl-5; }
+.prose-zai li { @apply my-1; }
+.prose-zai table { @apply my-3 w-full border-collapse text-sm; }
+.prose-zai th,
+.prose-zai td { @apply border border-slate-200 px-2 py-1 text-left align-top; }
+.prose-zai th { @apply bg-slate-100; }
+.prose-zai code { @apply rounded bg-slate-100 px-1; }

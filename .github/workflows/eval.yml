@@ -1,0 +1,39 @@
+name: AI Eval
+
+# Chạy tay (tốn token Gemini thật). Cần secret GEMINI_API_KEY trong Settings → Secrets → Actions.
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Model Gemini cần đánh giá"
+        default: gemini-3.8-flash
+      repeat:
+        description: "Số lần chạy mỗi ca (đo độ dao động)"
+        default: "3"
+      min_f1:
+        description: "Ngưỡng F1 tối thiểu (0-1)"
+        default: "0.8"
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run eval
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ inputs.model }}
+        run: npm run eval -- --repeat ${{ inputs.repeat }} --min-f1 ${{ inputs.min_f1 }}
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: evals/results/
+

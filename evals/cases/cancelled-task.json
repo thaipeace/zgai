@@ -1,0 +1,16 @@
+{
+  "id": "cancelled-task",
+  "description": "Mẫu 'Việc tồn đọng': việc đã bị hủy không được tính là tồn đọng",
+  "group": "Marketing",
+  "now": "2026-10-29 18:00",
+  "template": "unfinished",
+  "messages": [
+    { "at": "2026-10-29 10:00", "from": "Minh", "text": "@Hùng làm thêm trang landing page cho chương trình Tết nhé" },
+    { "at": "2026-10-29 10:05", "from": "Hùng", "text": "Dạ" },
+    { "at": "2026-10-29 14:00", "from": "Minh", "text": "Hủy việc landing page Tết nhé Hùng, khách đổi kế hoạch rồi" },
+    { "at": "2026-10-29 14:30", "from": "Minh", "text": "@Lan viết 3 bài Facebook cho tuần sau" }
+  ],
+  "expected": [{ "keywords": ["facebook"], "assignee": "Lan", "status": "open" }],
+  "forbidden": [["landing"]]
+}
+

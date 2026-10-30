@@ -1,0 +1,30 @@
+# Render Blueprint: Dashboard -> New -> Blueprint -> chọn repo này.
+services:
+  - type: web
+    name: zalo-ai
+    runtime: node
+    plan: free
+    region: singapore
+    # Test chạy offline (~3 giây). Test lỗi => build lỗi => Render giữ nguyên bản đang chạy,
+    # bot Zalo không bị ngắt kết nối vì một bản deploy hỏng.
+    buildCommand: npm ci && npm test && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: APP_TIMEZONE
+        value: Asia/Ho_Chi_Minh
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: APP_PASSWORD
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+
