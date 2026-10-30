@@ -7,7 +7,7 @@ services:
     region: singapore
     # Test chạy offline (~3 giây). Test lỗi => build lỗi => Render giữ nguyên bản đang chạy,
     # bot Zalo không bị ngắt kết nối vì một bản deploy hỏng.
-    buildCommand: npm ci && npm test && npm run build
+    buildCommand: npm ci --include=dev && npm test && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
